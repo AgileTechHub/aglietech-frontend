@@ -1,173 +1,234 @@
 * {
- font-family: "Plus Jakarta Sans", sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
 }
-/* header start */
-.top-bar {
-    background-color: #f5f5f5;
-    padding: 30px 0;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 50px;
+
+
+:root {
+    --main-blue: #246bfd;
+    --heading-color: #101a29;
+    --paragraph-color: #737588;
+    --body-font-family: "Plus Jakarta Sans", sans-serif;
+    --heading-font-family: "Plus Jakarta Sans", sans-serif;
+    --body-font-size: 16px;
+    --line-height30: 1.7;
+
 }
 
-.contact-info {
-    height: 8vh;
-    font-size: 14px;
-    color:#73758f;
-    display: flex;
-    gap:5px;
-    align-items: center;
-}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 
-.contact-info a {
-    color:#73758f;
-    text-decoration: none;
-}
-.social-media {
-    display: flex;
-    align-items: center;
-    color:#73758f;  
-}
-
-.social-media a {
-    color: #73758f;
-    margin-left: 15px;
-    font-size: 18px;
-}
-
-.main-menu {
-    background-color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 30px 50px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-
-
-.main-menu ul {
-    list-style: none;
-    display: flex;
-    margin-left:100px;
-    gap:20px;
-}
-
-
-.main-menu ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.main-menu ul li a:hover {
-    color: #007bff;
-}
-/* header end */
-
-
-
-/* 
-main start */
-
-.main {
-    background-image: url(./image/1.png);
-    background-size: cover;
-    background-position: center;
-    color: #ffffff;
-    padding: 100px 50px;
-    display: flex;
-    align-items: center;
-    height: 100vh;
-}
-
-.main-text {
-    max-width: 600px;
-    margin-left: 100px;
-}
-
-.main h5 {
-    font-size: 30px;
-    font-weight: 400;
-    margin-bottom: 20px;
-}
-
-.main h1 {
-    font-size:60px;
-    font-weight: bold;
-    margin-bottom: 20px;
+    font-weight: 600;
+    font-family: var(--heading-font-family);
     line-height: 1.2;
 }
 
-.main p {
+h6 {
+
     font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 30px;
+    margin-bottom: 1rem;
+
 }
 
-.main-buttons {
-    display: flex;
-    gap: 20px;
+h2 {
+    font-size: 40px;
+
 }
 
-.btn-primary{
-    padding: 20px 30px;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    background-color: #007bff;
-    color: #ffffff;
-    display: inline-block;
-}
 
-.btn-secondary {
-    padding: 20px 30px;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #ffffff; 
-}
-
-/* 
-main end */
-
-/* 
-services start */
-.services {
+.heading {
+    width: 40%;
     text-align: center;
-    padding: 50px 20px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-bottom: 45px;
+}
+
+.heading h6 {
+    color: var(--main-blue);
+}
+
+.container {
+    width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.center-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Project Css Start */
+.project-btns {
+    gap: 8px;
+
+}
+
+.project-content button {
+    background-color: white;
+    padding: 1.2rem 2.3rem;
+    border: 1px solid #e3e3e3;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .4s;
+
+}
+
+.project-content button:hover {
+    background-color: var(--main-blue);
+    color: white;
+}
+
+.project-photos {
+    margin-top: 50px;
+    position: relative;
+}
+
+.photo-row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.photo-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo {
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+    margin-top: -4px;
+}
+
+.photo img {
     width: 100%;
 }
 
-.services-subtitle {
-    color: #007bff;
-    font-size: 18px;
+.photo-shape {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    transition: .4s;
+    transform: translateY(5px);
+    padding: 20px 30px;
+    border-bottom: 65px solid var(--main-blue);
+    opacity: 0;
+}
+
+.photo::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background: hsla(0, 0%, 100%, .8);
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: .4s;
+    background: rgba(43, 43, 94, .9);
+    transform: scale(0.9);
+}
+
+.photo:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.photo p {
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.photo h5 {
+    color: #ffffff;
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
-.services-title {
-    font-size: 28px;
-    margin-bottom: 30px;
+.photo-link {
+    margin-bottom: -49px;
+    text-align: center;
 }
 
-.service-cards {
+.photo-link a {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    background: #2b2b5e;
+    display: inline-block;
+    color: #fff;
+}
+
+.photo:hover .photo-shape {
+    opacity: 1;
+    transform: translate(0);
+}
+
+.technology,
+.all,
+.business,
+.marketing {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .40s linear;
+}
+
+.active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    transform: translateX(0);
+}
+
+.select {
+    background-color: var(--main-blue) !important;
+    color: white;
+}
+.btns-row{
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.service-card {
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-    max-width: 300px;
-    text-align: left;
-    transition: transform 0.3s ease;
-}
+/* Project Css End */
