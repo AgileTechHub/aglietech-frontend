@@ -44,7 +44,7 @@ h2 {
 
 
 .heading {
-    width: 40%;
+    width: 55%;
     text-align: center;
     padding-left: 12px;
     padding-right: 12px;
@@ -56,7 +56,7 @@ h2 {
 }
 
 .container {
-    width: 100%;
+    max-width: 1280px;
     padding-left: 12px;
     padding-right: 12px;
     margin-right: auto;
@@ -78,13 +78,22 @@ h2 {
 }
 
 .area {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 
-
+.section-margin{
+    margin-bottom: 100px;
+}
+.choose-img{
+    max-width: 46%;
+}
+.choose-img img{
+    width: 100%;
+}
 /* Project Css Start */
 .project-btns {
     gap: 8px;
@@ -226,9 +235,79 @@ h2 {
     background-color: var(--main-blue) !important;
     color: white;
 }
-.btns-row{
+
+.btns-row {
     display: flex;
     gap: 10px;
 }
 
 /* Project Css End */
+
+
+
+/* Choose Css Start */
+
+.choose-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.choose-heading .heading {
+    flex: 0 0 auto;
+    width: 33%;
+    text-align: left;
+}
+
+.choose-heading p {
+    width: 58%;
+    opacity: 0.7;
+    font-size: 16px;
+}
+
+.choose-info {
+    display: flex;
+    align-items: center;
+    
+}
+
+.choose-cards {
+    width: 41%;
+    gap: 10px;
+    margin-right: 40px;
+}
+
+.choose-card {
+    background: #fff;
+    border: 1px solid #e3e3e3;
+    padding: 30px 25px 30px 70px;
+    position: relative;
+gap: 27px;
+}
+
+.choose-card h4 {
+    color: #101a29;
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.choose-card p {
+    opacity: 0.7;
+}
+.choose-card-count{
+    height: 60px;
+    padding: 0 25px;
+    line-height: 60px;
+    background: var(--main-blue);
+    color: #fff !important;
+    position: absolute;
+    left: -37px;
+    top: 50%;
+    margin-top: -30px;
+}
+
+
+
+/* Choose Css End */

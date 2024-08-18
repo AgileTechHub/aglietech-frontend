@@ -1,5 +1,5 @@
 const buttons = document.querySelectorAll(".project-btns button")
-const test = document.querySelectorAll(".photo-block")
+const photoBlock= document.querySelectorAll(".photo-block")
 
 buttons.forEach((button) => {
     button.addEventListener("click", (e) => {
@@ -11,13 +11,13 @@ buttons.forEach((button) => {
         const lowValue=value.toLowerCase()
         button.classList.add("select")
 
-        test.forEach((ger) => {
+        photoBlock.forEach((photo) => {
 
-            if (ger.classList.contains(lowValue)) {
-                ger.classList.add("active")
+            if (photo.classList.contains(lowValue)) {
+                photo.classList.add("active")
 
             } else {
-                ger.classList.remove("active")
+                photo.classList.remove("active")
 
             }
         })
