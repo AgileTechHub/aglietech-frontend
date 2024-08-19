@@ -1,36 +1,76 @@
 * {
-    font-family: Arial, sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    ;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    list-style: none;
 }
+
+:root {
+    --main-blue: #246bfd;
+    --heading-color: #101a29;
+    --paragraph-color: #737588;
+    --body-font-family: "Plus Jakarta Sans", sans-serif;
+    --heading-font-family: "Plus Jakarta Sans", sans-serif;
+    --body-font-size: 16px;
+    --line-height30: 1.7;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    font-weight: 600;
+    font-family: var(--heading-font-family);
+    line-height: 1.2;
+}
+
+h6 {
+
+    font-size: 16px;
+    margin-bottom: 1rem;
+
+}
+
+h2 {
+    font-size: 40px;
+
+}
+
 /* header start */
 .top-bar {
     background-color: #f5f5f5;
-    padding: 30px 0;
     display: flex;
-    justify-content: space-between;
-    padding: 0 50px;
+    justify-content: space-between; /* Kenarlara yakınlaştırır */
+    padding-left: 200px;
+    padding-right: 200px;
+    gap: 120px; /* İki bölüm arasındaki boşluğu artırır */
 }
 
 .contact-info {
     height: 8vh;
     font-size: 14px;
-    color:#73758f;
+    color: #73758f;
     display: flex;
-    gap:5px;
+    gap: 10px;
     align-items: center;
 }
 
 .contact-info a {
-    color:#73758f;
+    color: #73758f;
     text-decoration: none;
 }
+
 .social-media {
     display: flex;
     align-items: center;
-    color:#73758f;  
+    color: #73758f;
 }
 
 .social-media a {
@@ -43,31 +83,91 @@
     background-color: #ffffff;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 30px 50px;
+    justify-content: space-evenly;
+    padding: 25px 200px 25px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
-
+.main-menu img {
+    height: auto;
+    width: auto;
+    max-width: 150px;
+}
 
 .main-menu ul {
     list-style: none;
     display: flex;
-    margin-left:100px;
-    gap:20px;
+    gap: 30px;
+    margin-left: 0;
 }
 
+.main-menu ul li {
+    position: relative;
+}
 
 .main-menu ul li a {
     text-decoration: none;
     color: #333;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
+    transition: 0.5s ease;
 }
 
 .main-menu ul li a:hover {
     color: #007bff;
 }
+
+/* Dropdown menü başlangıçta gizli */
+.dropdown-menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    visibility: hidden; /* Menü gizli */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menüyü gölgeyle vurgulama */
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu li a {
+    display: block;
+    width: 100%;
+    height: 4vh;
+
+    color: #333;
+    font-size: 10px;
+
+    text-decoration: none;
+    background-color: #ffffff; /* Arka plan rengini beyaz yap */
+    transition: background-color 0.3s ease; /* Yumuşak geçiş efekti */
+}
+
+.dropdown-menu li:hover a  {
+    background-color: #246bfd; /* Üzerine gelindiğinde arka plan rengini değiştir */
+    color: white; /* Metin rengini beyaz yap */
+}
+
+/* Menü yalnızca 'Home' öğesi üzerine gelindiğinde görünür */
+.dropdown:hover .dropdown-menu {
+    visibility: visible; /* Menü görünür */
+}
+
+
+
+
+
+
 /* header end */
 
 
@@ -98,7 +198,7 @@ main start */
 }
 
 .main h1 {
-    font-size:60px;
+    font-size: 60px;
     font-weight: bold;
     margin-bottom: 20px;
     line-height: 1.2;
@@ -112,62 +212,298 @@ main start */
 
 .main-buttons {
     display: flex;
+    align-items: center;
     gap: 20px;
 }
 
-.btn-primary{
-    padding: 20px 30px;
-    border-radius: 5px;
+.btn-primary {
+    width: 200px;
+    height: 7vh;
     font-size: 16px;
     font-weight: bold;
     background-color: #007bff;
     color: #ffffff;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.btn-secondary {
-    padding: 20px 30px;
+.btn-primary .icon {
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.secondary {
+    display: inline-flex;
+    align-items: center;
     border-radius: 5px;
     font-size: 16px;
     font-weight: bold;
-    color: #ffffff; 
+    color: #ffffff;
+    text-decoration: none;
 }
+
+.secondary .icon-img {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+/* .btn-primary i{
+    color:black;
+    font-size: 8px;
+    font-weight: bold;
+}
+.btn-primary .i-box{
+    width: 13px;
+    height: 13px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+} */
+
+
 
 /* 
 main end */
 
 /* 
 services start */
-.services {
-    text-align: center;
-    padding: 50px 20px;
+.services{
     width: 100%;
+    height: 100vh;
+    margin-top: 50px;
 }
-
-.services-subtitle {
-    color: #007bff;
-    font-size: 18px;
-    margin-bottom: 10px;
+.services .services-subtitle{
+    color:var(--main-blue);
+    text-align: center;
+  
 }
-
-.services-title {
-    font-size: 28px;
-    margin-bottom: 30px;
+.services .services-title{
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
 }
-
-.service-cards {
+.services .cards{
+    width: 100%;
+    height: 60vh;
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap:50px;
+    position: relative;
+}
+.services .cards img{
+    width: 420px;
+}
+.services .cards .text{
+    width: 350px;
+    height: 300px;
+    position: absolute;
+    top:70%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+    margin-left:40px;
 }
 
-.service-card {
+.services .cards .line-text{
+    width: 100%;
+    height: 0.5vh;
+    background-color: black;
+
+}
+.services .cards svg {
+    width: 100px;
+   
+}
+
+.services .svg-container {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    left: 47%;
+    bottom: 25%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+
+.services .cards  p{
+    color:rgb(127, 127, 127)
+}
+
+
+
+
+
+
+/* 
+form start **********************************/
+
+.form {
+    width: 80%;
+    height: 80vh;
+    background-image: url(./image/14.png);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.form-text {
+    width: 45%;
+    color: white;
+    font-size: var(--body-font-size);
+}
+
+.form-text h2,
+.form-text p {
+    color: white;
+}
+
+.form-main {
+    width: 50%;
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+}
+
+.form-main h2 {
+    margin-bottom: 20px;
+    font-size: 40px;
+    margin-right: 20px;
+
+}
+
+.form-text h6 {
+    color: var(--main-blue)
+}
+
+.up,
+.center {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 35px;
+    /* Üst ve merkez input grupları arasına boşluk */
+}
+
+input {
+    width: 48%;
+    height: 7vh;
+    border: 1px solid rgb(233, 230, 230);
+    border-radius: 5px;
+    padding: 8px;
+    outline: none;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    /* Her input arasında boşluk */
+}
+
+textarea {
+    width: 100%;
+    height: 18vh;
+    border: 1px solid rgb(233, 230, 230);
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    box-sizing: border-box;
+    resize: none;
+    margin-bottom: 30px;
+    /* Textarea ile üstteki input arasında boşluk */
+}
+
+.btn-form {
+    width: 100%;
+    height: 7vh;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    position: relative;
     overflow: hidden;
-    max-width: 300px;
-    text-align: left;
-    transition: transform 0.3s ease;
+    z-index: 1;
+    transition: color 0.4s ease;
+    /* Metin rengi için geçiş efekti */
+}
+
+.btn-form::before {
+    content: '';
+    position: absolute;
+    bottom: -100%;
+    /* Alt köşeden başlamak için */
+    left: -100%;
+    /* Sol köşeden başlamak için */
+    width: 300%;
+    /* Katman genişliği */
+    height: 7vh;
+    /* Katman yüksekliği */
+    background-color: blue;
+    transition: bottom 0.4s ease, left 0.4s ease;
+    /* Hareket geçişleri */
+    z-index: -1;
+    transform: rotate(45deg);
+    /* Açıyı ayarlamak için döndürme */
+    opacity: 0;
+    /* Başlangıçta görünmez */
+}
+
+.btn-form:hover::before {
+    bottom: 0;
+    /* Katmanı aşağıdan yukarıya hareket ettirir */
+    left: 0;
+    /* Katmanı soldan sağa hareket ettirir */
+    opacity: 1;
+    /* Görünür yapar */
+}
+
+.btn-form:hover {
+    color: white;
+    /* Metin rengini beyaz tutuyoruz */
+}
+
+
+/* .text2 içindeki ul'lerin yan yana gelmesi ve metinlerin beyaz olması için eklemeler */
+.text2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.ul1,
+.ul2 {
+    list-style: none;
+    padding: 0;
+    color: white;
+    /* Metin rengi beyaz */
+}
+
+.ul1 li,
+.ul2 li {
+    margin-bottom: 10px;
+    /* Her bir li öğesi arasında boşluk */
+}
+
+.ul1 li i,
+.ul2 li i {
+    margin-right: 5px;
+    /* İkon ile metin arasında boşluk */
+    color: blue;
+    /* i etiketleri için mavi renk */
+    font-size: 20px;
+    font-weight: bold;
 }
