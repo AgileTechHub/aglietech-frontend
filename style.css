@@ -78,17 +78,16 @@ h2 {
   align-items: center;
 }
 
-
 .section-margin {
-    margin-bottom: 100px;
+  margin-bottom: 100px;
 }
 
 .choose-img {
-    max-width: 46%;
+  max-width: 46%;
 }
 
 .choose-img img {
-    width: 100%;
+  width: 100%;
 }
 
 /* Project Css Start */
@@ -220,8 +219,7 @@ h2 {
 }
 
 .all {
-    position: static !important;
-    ;
+  position: static !important;
 }
 
 .active {
@@ -264,9 +262,8 @@ h2 {
 }
 
 .choose-info {
-    display: flex;
-    align-items: center;
-
+  display: flex;
+  align-items: center;
 }
 
 .choose-cards {
@@ -276,14 +273,11 @@ h2 {
 }
 
 .choose-card {
-
-
-    background: #fff;
-    border: 1px solid #e3e3e3;
-    padding: 30px 25px 30px 70px;
-    position: relative;
-    gap: 27px;
-
+  background: #fff;
+  border: 1px solid #e3e3e3;
+  padding: 30px 25px 30px 70px;
+  position: relative;
+  gap: 27px;
 }
 
 .choose-card h4 {
@@ -297,34 +291,176 @@ h2 {
   opacity: 0.7;
 }
 
-
 .choose-card-count {
-    height: 60px;
-    padding: 0 25px;
-    line-height: 60px;
-    background: var(--main-blue);
-    color: #fff !important;
-    position: absolute;
-    left: -37px;
-    top: 50%;
-    margin-top: -30px;
-
+  height: 60px;
+  padding: 0 25px;
+  line-height: 60px;
+  background: var(--main-blue);
+  color: #fff !important;
+  position: absolute;
+  left: -37px;
+  top: 50%;
+  margin-top: -30px;
 }
 
 /* Choose Css End */
 
-/* Footer Css Start */
+/* Team Css Start */
+.team-content {
+  position: relative;
+}
 
+.team-content .container {
+  background-color: var(--main-blue);
+  color: white;
+  font-weight: 500;
+  padding: 50px 0;
+}
+
+.team-row {
+  width: 50%;
+  justify-content: space-evenly;
+}
+
+.team-card {
+  width: 50%;
+}
+
+.team-content span {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.team-card img {
+  transition: all 500ms ease;
+}
+.team-card:hover img {
+  transform: rotateY(180deg);
+}
+
+/* Team Css End */
+
+/* About Css Start */
+
+.about-content {
+  background-color: #2b2b5e;
+  padding-top: 120px;
+  padding-bottom: 60px;
+  background-size: cover !important;
+  background-position: 50%;
+  margin-top: -120px;
+  z-index: -1;
+}
+
+.about-heading {
+  margin-top: 120px;
+}
+
+.about-heading h6 {
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  padding: 0;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.about-heading h2 {
+  color: #fff;
+}
+
+.about-heading span {
+  color: var(--main-blue);
+}
+
+.about-card-img {
+  position: relative;
+  width: 41%;
+}
+
+.about-card-shape {
+  background: #fff;
+  padding: 20px 5px;
+  border-radius: 8px;
+}
+
+.about-card-shape img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.about-img {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 130px;
+  border-radius: 8px;
+}
+
+.about-card-info {
+  width: 58%;
+  align-items: flex-start;
+  position: relative;
+}
+
+.about-card-info p {
+  color: #fff;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+.about-card-info h6 {
+  color: #fff !important;
+  font-size: 22px;
+}
+
+.about-card-info i {
+  color: #ffc107;
+}
+
+.about-card-info img {
+  position: absolute;
+  left: -40px;
+  top: -4px;
+}
+
+.about-carusel {
+  width: 100%;
+  margin-top: 80px;
+}
+
+.about-carusel-row {
+  width: 100%;
+  display: flex;
+  padding-bottom: 70px;
+}
+
+.about-card {
+  width: 50%;
+  gap: 4rem;
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  width: 12px !important;
+  height: 12px !important;
+}
+
+/* About Css End */
+
+/* Footer Css Start */
 
 footer {
   width: 100%;
-  min-height: 80vh;
+
   background-color: #2b2b5e;
 }
 
 .media-container {
   width: 100%;
-  height: 18vh;
   display: flex;
   align-items: flex-start;
   gap: 32px;
@@ -333,7 +469,6 @@ footer {
 
 .media {
   width: 32%;
-  height: 14vh;
   background-color: #101a29;
   font-family: var(--heading-font-family);
   font-weight: 600;
@@ -342,13 +477,15 @@ footer {
   gap: 16px;
 }
 
+.media:nth-child(3) {
+  padding: 35px;
+}
+
 .text-white {
   color: white;
 }
 
 .widget-container {
-  width: 100%;
-  height: 45vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -356,7 +493,7 @@ footer {
 }
 
 .widget {
-  width: 25%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -372,6 +509,9 @@ footer {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+}
+.widget:nth-child(1) {
+  margin-right: 30px;
 }
 
 .sosial-media {
@@ -452,6 +592,8 @@ footer h5 {
   padding-top: 20px;
   text-align: center;
   font: 16px var(--heading-font-family);
+  margin-top: 50px;
+  padding: 30px;
 }
 
 .footer-bottom::before {
@@ -464,167 +606,10 @@ footer h5 {
   left: 0;
 }
 
+.media-row {
+  justify-content: space-evenly;
+  width: 50%;
+  align-items: flex-start;
+}
+
 /* Footer Css Stop */
-
-/* Choose Css End */
-
-
-
-/* Team Css Start */
-.team-content {
-
-    position: relative;
-
-}
-
-.team-content .container {
-    background-color: var(--main-blue);
-    color: white;
-    font-weight: 500;
-    padding: 50px 0;
-}
-
-.team-row {
-    width: 50%;
-    justify-content: space-evenly;
-}
-
-.team-card {
-    width: 50%;
-}
-
-.team-content span {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-.team-card img{
-    transition: all 500ms ease;
-}
-.team-card:hover img{
-    transform: rotateY(180deg);
-}
-
-
-
-/* Team Css End */
-
-
-/* About Css Start */
-
-
-.about-content {
-    background-color: #2B2B5E;
-    padding-top: 120px;
-    padding-bottom: 60px;
-    background-size: cover !important;
-    background-position: 50%;
-    margin-top: -120px;
-    z-index: -1;
-}
-
-.about-heading {
-    margin-top: 120px;
-}
-
-.about-heading h6 {
-    border-radius: 0;
-    box-shadow: none;
-    background: transparent;
-    padding: 0;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-.about-heading h2 {
-    color: #fff;
-}
-
-.about-heading span {
-    color: var(--main-blue);
-}
-
-.about-card-img {
-
-    position: relative;
-    width: 41%;
-}
-
-.about-card-shape {
-    background: #fff;
-    padding: 20px 5px;
-    border-radius: 8px;
-}
-
-.about-card-shape img {
-    max-width: 100%;
-    vertical-align: middle;
-
-}
-
-.about-img {
-    position: absolute;
-    right: -20px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 130px;
-    border-radius: 8px;
-}
-
-.about-card-info {
-    width: 58%;
-    align-items: flex-start;
-    position: relative;
-}
-
-.about-card-info p {
-    color: #fff;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 1.7;
-    margin-bottom: 10px;
-}
-
-.about-card-info h6 {
-    color: #fff !important;
-    font-size: 22px;
-}
-
-.about-card-info i {
-    color: #ffc107;
-}
-
-.about-card-info img {
-    position: absolute;
-    left: -40px;
-    top: -4px;
-}
-
-.about-carusel {
-    width: 100%;
-    margin-top: 80px;
-
-}
-
-.about-carusel-row {
-    width: 100%;
-    display: flex;
-    padding-bottom: 70px;
-}
-
-.about-card {
-    width: 50%;
-    gap: 4rem;
-}
-
-
-.swiper-pagination-bullet,
-.swiper-pagination-bullet-active {
-    width: 12px !important;
-    height: 12px !important;
-
-}
-
-/* About Css End */
-
-
