@@ -23,11 +23,26 @@
         max-width: 960px;
     }
 
+    /* Choose Responsive Start */
+
     .choose-cards {
         width: 50%;
     }
 
+    /* Choose Responsive End */
+
+    /* About Responsive Start */
+
+    .about-card-shape {
+        padding: 0;
+        width: 122px;
+        height: 152px;
+    }
+
+    /* About Responsive End */
+
     /* Project Responsive Start */
+
     .photo-block {
         flex-direction: column;
     }
@@ -48,6 +63,7 @@
         width: 90%;
     }
 
+    /* Choose Responsive Start */
     .choose-heading {
         flex-direction: column;
     }
@@ -75,7 +91,7 @@
         margin-top: 40px;
     }
 
-
+    /* Choose Responsive End */
 
     /* Project Responsive Start */
     .photo {
@@ -90,6 +106,40 @@
     }
 
     /* Project Responsive End */
+
+    /* Team Responsive Start  */
+
+    .team-content .container {
+        flex-direction: column;
+    }
+
+    .team-card {
+        text-align: center;
+    }
+
+    .team-row {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    /* Team Responsive End  */
+
+    /* About Responsive Start */
+    .person1 {
+        display: none;
+    }
+
+    .about-card {
+        width: 100%;
+    }
+
+    .about-card-shape {
+        padding: 20px 25px;
+        width: 162px;
+        height: 200px;
+    }
+
+    /* Team Responsive End */
 }
 
 
@@ -98,6 +148,7 @@
         max-width: 540px;
     }
 
+    /* Choose Responsive Start */
     .choose-info {
 
         justify-content: center;
@@ -108,6 +159,9 @@
     .choose-cards {
         margin-right: 0;
     }
+
+    /* Choose Responsive End */
+
 
     /* Project Responsive Start */
     .photo-block {
@@ -120,6 +174,15 @@
     }
 
     /* Project Responsive End */
+
+
+    /* About Responsive Start */
+
+    .about-heading {
+        text-align: center;
+    }
+
+    /* About Responsive End */
 }
 
 @media (max-width:591px) {
@@ -141,6 +204,8 @@
         font-size: 30px;
     }
 
+    /* Choose Responsive Start */
+
     .choose-heading p {
         width: 100%;
     }
@@ -149,15 +214,33 @@
         width: 100% !important;
         margin-bottom: 20px;
     }
-.choose-card{
-    padding: 20px;
-}
-.choose-card-count{
-    left: 0;
-top: 82%;
-padding: 0 20px;
+
+    .choose-card {
+        padding: 20px;
+    }
+
+    .choose-card-count {
+        left: 0;
+        top: 82%;
+        padding: 0 20px;
+    }
+
+    /* Choose Responsive End */
 }
 
-}
+@media (max-width:394px) {
 
-@media (max-width:394px) {}
+    /* About Responsive Start */
+
+    .about-card-info p {
+        font-size: 11px;
+    }
+
+    .about-card-shape {
+        padding: 20px 25px;
+        width: 162px;
+        height: 200px;
+    }
+
+    /* About Responsive End */
+}
