@@ -350,7 +350,12 @@ h2 {
     font-size: 40px;
     margin-bottom: 10px;
 }
-
+.team-card img{
+    transition: all 500ms ease;
+}
+.team-card:hover img{
+    transform: rotateY(180deg);
+}
 
 
 
