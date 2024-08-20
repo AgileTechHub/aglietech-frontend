@@ -25,9 +25,6 @@
     max-width: 960px;
   }
 
-  /* Footer Responsive Start */
-
-  /* Footer Responsive Stop */
   /* Choose Responsive Start */
 
   .choose-cards {
@@ -109,6 +106,29 @@
   }
 
   /* Project Responsive End */
+
+  /* Process Responsive Start */
+  .simple-title h2 {
+    font-size: 30px;
+  }
+  .process-cart-row {
+    width: 47%;
+  }
+  .process-cart {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 30px;
+  }
+  .process-img p {
+    width: 25% !important;
+    height: 25%;
+    line-height: 30px;
+  }
+
+  .process-details p {
+    font-size: 16px;
+  }
+  /* Process Responsive End */
 
   /* Team Responsive Start  */
 
@@ -201,6 +221,30 @@
   }
 
   /* Project Responsive End */
+
+    /* Process Responsive Start */
+    .simple-title h2 {
+      font-size: 18px;
+      font: bold;
+    }
+    .process-cart-row {
+      width: 100%;
+    }
+    .process-cart {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 30px;
+    }
+    .process-img p {
+      width: 25% !important;
+      height: 25%;
+      line-height: 30px;
+    }
+  
+    .process-details p {
+      font-size: 16px;
+    }
+    /* Process Responsive End */
 
   /* About Responsive Start */
 
