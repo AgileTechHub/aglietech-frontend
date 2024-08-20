@@ -110,7 +110,7 @@ h2 {
     text-decoration: none;
     color: #333;
     font-size: 15px;
-    font-weight: bold;
+
     transition: 0.5s ease;
 }
 
@@ -118,51 +118,58 @@ h2 {
     color: #007bff;
 }
 
-/* Dropdown menü başlangıçta gizli */
 .dropdown-menu {
-    width: 100%;
+   
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center !important;
+    justify-content: center !important;
     flex-direction: column;
-    visibility: hidden; /* Menü gizli */
+    opacity: 0; /* Başlangıçta görünmez */
+    visibility: hidden; /* Başlangıçta görünmez */
     position: absolute;
-    top: 100%;
+    top: 52px;
+    gap: 0 !important;
     left: 0;
+    padding: 0 !important;
+    border: none !important;
     background-color: #ffffff;
     list-style: none;
-    padding: 0;
-    margin: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menüyü gölgeyle vurgulama */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Geçiş efektleri */
 }
 
 .dropdown-menu li {
-    width: 100%;
+    min-width: 210px !important;
+    display: block;
+    margin-left: 0;
+    line-height: 22px;
+    font-size: 15px;
+    transition: all .4s ease;
+    border-bottom: 1px solid #f5f5f5;
 }
 
 .dropdown-menu li a {
     display: block;
-    width: 100%;
-    height: 4vh;
-
-    color: #333;
-    font-size: 10px;
-
-    text-decoration: none;
-    background-color: #ffffff; /* Arka plan rengini beyaz yap */
-    transition: background-color 0.3s ease; /* Yumuşak geçiş efekti */
+    padding: 10px 20px;
+    white-space: nowrap;
+    transition: all .3s;
+    color: #050a30;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all .4s ease;
+    position: relative;
 }
 
-.dropdown-menu li:hover a  {
-    background-color: #246bfd; /* Üzerine gelindiğinde arka plan rengini değiştir */
-    color: white; /* Metin rengini beyaz yap */
+.dropdown-menu li:hover > a {
+    background-color: var(--main-blue) !important; 
+    color: white !important;
 }
 
-/* Menü yalnızca 'Home' öğesi üzerine gelindiğinde görünür */
-.dropdown:hover .dropdown-menu {
-    visibility: visible; /* Menü görünür */
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+    opacity: 1; /* Görünür hale gelir */
+    visibility: visible; /* Görünür hale gelir */
 }
-
 
 
 
@@ -218,7 +225,7 @@ main start */
 
 .btn-primary {
     width: 200px;
-    height: 7vh;
+    height: 8vh;
     font-size: 16px;
     font-weight: bold;
     background-color: #007bff;
@@ -226,8 +233,29 @@ main start */
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
 }
-
+.btn-primary::after{
+    content: "";
+    background:black;
+    position: absolute;
+    transition: all .3s ease-in;
+    z-index: -1;
+    height: 100%;
+    left: -35%;
+    top: 0;
+    transform: skew(30deg);
+    transition-duration: .6s;
+    transform-origin: top left;
+    width: 0;
+}
+.btn-primary:hover::after{
+    height: 100%;
+    width: 135%;
+   
+}
 .btn-primary .icon {
     margin-left: 8px;
     vertical-align: middle;
@@ -286,7 +314,7 @@ services start */
 }
 .services .cards{
     width: 100%;
-    height: 60vh;
+  
     display: flex;
     align-items: center;
     justify-content: center;
@@ -297,28 +325,25 @@ services start */
     width: 420px;
 }
 .services .cards .text{
-    width: 350px;
-    height: 300px;
-    position: absolute;
-    top:70%;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    z-index: 1;
-    margin-left:40px;
+    box-shadow: 0 3px 20px rgba(0, 33, 71, .06);
+    background: #fff;
+    margin: -50px 20px 20px;
+    position: relative;
+    z-index: 2;
+    padding: 40px;
+    border-bottom: 6px solid #101a29;
+    transition: .4s;
+    text-align: center;
 }
 
-.services .cards .line-text{
-    width: 100%;
-    height: 0.5vh;
-    background-color: black;
 
-}
 .services .cards svg {
     width: 100px;
    
+}
+.text h3{
+    font-size: 22px;
+    margin-bottom: 10px;
 }
 
 .services .svg-container {
@@ -327,9 +352,9 @@ services start */
     background-color: black;
     border-radius: 50%;
     position: absolute;
-    left: 47%;
-    bottom: 25%;
-    z-index: 2;
+    left: 44%;
+    bottom: 37%;
+    z-index: 3;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -340,9 +365,13 @@ services start */
 .services .cards  p{
     color:rgb(127, 127, 127)
 }
+.services .cards .card{
+    position: relative;
+}
 
-
-
+.services h2{
+    margin-bottom:40px;
+}
 
 
 
@@ -351,7 +380,7 @@ form start **********************************/
 
 .form {
     width: 80%;
-    height: 80vh;
+ 
     background-image: url(./image/14.png);
     display: flex;
     align-items: center;
@@ -372,7 +401,7 @@ form start **********************************/
 
 .form-main {
     width: 50%;
-    padding: 45px;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -426,58 +455,47 @@ textarea {
 }
 
 .btn-form {
-    width: 100%;
-    height: 7vh;
-    color: white;
-    background-color: black;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-    position: relative;
+    height: 55px;
+    line-height: 55px;
+    padding: 0 30px;
+     width: 100%;
     overflow: hidden;
-    z-index: 1;
-    transition: color 0.4s ease;
-    /* Metin rengi için geçiş efekti */
+    position: relative;
+    border: 0;
+    transition: all .5s ease;
+    font-weight: 600;
+    border-radius: 5px !important;
+    z-index: 0;
+    color: #fff !important;
+    background: black;
+    text-align: center;
 }
 
-.btn-form::before {
-    content: '';
+
+.btn-form::after{
+    content: "";
+    background:var(--main-blue);
     position: absolute;
-    bottom: -100%;
-    /* Alt köşeden başlamak için */
-    left: -100%;
-    /* Sol köşeden başlamak için */
-    width: 300%;
-    /* Katman genişliği */
-    height: 7vh;
-    /* Katman yüksekliği */
-    background-color: blue;
-    transition: bottom 0.4s ease, left 0.4s ease;
-    /* Hareket geçişleri */
+    transition: all .3s ease-in;
     z-index: -1;
-    transform: rotate(45deg);
-    /* Açıyı ayarlamak için döndürme */
-    opacity: 0;
-    /* Başlangıçta görünmez */
+    height: 100%;
+    left: -35%;
+    top: 0;
+    transform: skew(30deg);
+    transition-duration: .6s;
+    transform-origin: top left;
+    width: 0;
+ 
 }
 
-.btn-form:hover::before {
-    bottom: 0;
-    /* Katmanı aşağıdan yukarıya hareket ettirir */
-    left: 0;
-    /* Katmanı soldan sağa hareket ettirir */
-    opacity: 1;
-    /* Görünür yapar */
-}
-
-.btn-form:hover {
-    color: white;
-    /* Metin rengini beyaz tutuyoruz */
+.btn-form:hover::after{
+   
+    height: 100%;
+    width: 135%;
+   
 }
 
 
-/* .text2 içindeki ul'lerin yan yana gelmesi ve metinlerin beyaz olması için eklemeler */
 .text2 {
     display: flex;
     justify-content: space-between;
