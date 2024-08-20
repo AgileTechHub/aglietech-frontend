@@ -1,87 +1,347 @@
-@media (max-width:1600px) {
-
-
-    .heading {
-        width: 50%;
-    }
-
+@media (max-width: 1600px) {
+  .heading {
+    width: 50%;
+  }
 }
 
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1140px;
+  }
 
+  /* Footer Responsive Start */
+  footer .media:nth-child(3) h5 {
+    font-size: 17px;
+  }
+  footer .media-recent {
+    width: 250px;
+  }
 
-
-@media (max-width:1280px) {}
-
-
-@media (max-width:1120px) {
-
-    /* Project Responsive Start */
-    .photo-block {
-        flex-direction: column;
-    }
-
-    .photo-row {
-        flex-direction: row;
-    }
-
-    /* Project Responsive End */
+  /* Footer Responsive Stop */
 }
 
-@media (max-width:853px) {
-    .heading {
-        width: 90%;
-    }
+@media (max-width: 1120px) {
+  .container {
+    max-width: 960px;
+  }
 
-    /* Project Responsive Start */
-    .photo {
-        width: 100%;
-        height: 340px;
-    }
+  /* Choose Responsive Start */
 
-    .photo img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+  .choose-cards {
+    width: 50%;
+  }
 
-    /* Project Responsive End */
+  /* Choose Responsive End */
+
+  /* About Responsive Start */
+
+  .about-card-shape {
+    padding: 0;
+    width: 122px;
+    height: 152px;
+  }
+
+  /* About Responsive End */
+
+  /* Project Responsive Start */
+
+  .photo-block {
+    flex-direction: column;
+  }
+
+  .photo-row {
+    flex-direction: row;
+  }
+
+  /* Project Responsive End */
 }
 
+@media (max-width: 853px) {
+  .container {
+    max-width: 720px;
+  }
 
-@media (max-width:608px) {
+  .heading {
+    width: 90%;
+  }
 
-    /* Project Responsive Start */
-    .photo-block {
-        width: 100%;
-    }
+  /* Choose Responsive Start */
+  .choose-heading {
+    flex-direction: column;
+  }
 
-    .photo-row {
-        flex-direction: column;
+  .choose-heading .heading,
+  p {
+    width: 90% !important;
+  }
 
-    }
+  .choose-info {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
 
-    /* Project Responsive End */
+  .choose-cards {
+    width: 90%;
+    margin-top: 40px;
+    gap: 20px;
+  }
+
+  .choose-img {
+    max-width: 90%;
+    margin-top: 40px;
+  }
+
+  /* Choose Responsive End */
+
+  /* Project Responsive Start */
+  .photo {
+    width: 100%;
+    height: 340px;
+  }
+
+  .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Project Responsive End */
+
+  /* Process Responsive Start */
+  .simple-title h2 {
+    font-size: 30px;
+  }
+  .process-cart-row {
+    width: 47%;
+  }
+  .process-cart {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 30px;
+  }
+  .process-img p {
+    width: 25% !important;
+    height: 25%;
+    line-height: 30px;
+  }
+
+  .process-details p {
+    font-size: 16px;
+  }
+  /* Process Responsive End */
+
+  /* Team Responsive Start  */
+
+  .team-content .container {
+    flex-direction: column;
+  }
+
+  .team-card {
+    text-align: center;
+  }
+
+  .team-row {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  /* Team Responsive End  */
+
+  /* About Responsive Start */
+  .person1 {
+    display: none;
+  }
+
+  .about-card {
+    width: 100%;
+  }
+
+  .about-card-shape {
+    padding: 20px 25px;
+    width: 162px;
+    height: 200px;
+  }
+
+  /* Team Responsive End */
+
+  /* Footer Responsive Start */
+  .media-container {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .media {
+    width: 100%;
+  }
+  .media:nth-child(3) {
+    padding: 20px;
+  }
+
+  footer .media-row {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .widget-container {
+    margin-left: 120px;
+  }
+  .widget {
+    width: 100%;
+  }
+  .media-row:nth-child(1) {
+    gap: 80px;
+  }
+
+  /* Footer Responsive Stop */
 }
 
-@media (max-width:591px) {
+@media (max-width: 608px) {
+  .container {
+    max-width: 540px;
+  }
 
-    /* Project Responsive Start */
-    .btns-row {
-        flex-direction: column;
+  /* Choose Responsive Start */
+  .choose-info {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .choose-cards {
+    margin-right: 0;
+  }
+
+  /* Choose Responsive End */
+
+  /* Project Responsive Start */
+  .photo-block {
+    width: 100%;
+  }
+
+  .photo-row {
+    flex-direction: column;
+  }
+
+  /* Project Responsive End */
+
+    /* Process Responsive Start */
+    .simple-title h2 {
+      font-size: 18px;
+      font: bold;
     }
+    .process-cart-row {
+      width: 100%;
+    }
+    .process-cart {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 30px;
+    }
+    .process-img p {
+      width: 25% !important;
+      height: 25%;
+      line-height: 30px;
+    }
+  
+    .process-details p {
+      font-size: 16px;
+    }
+    /* Process Responsive End */
 
-    /* Project Responsive End */
+  /* About Responsive Start */
+
+  .about-heading {
+    text-align: center;
+  }
+
+  /* About Responsive End */
+
+  /* Footer Responsive Start */
+
+  footer .widget-container {
+    flex-direction: column;
+    width: 100%;
+    gap: 40px;
+    margin: 0;
+  }
+
+  .widget {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .media-row p {
+    width: 350px !important;
+    text-align: justify;
+  }
+
+  .media-recent h6.title {
+    width: 400px;
+  }
+  .media-row:nth-child(1) {
+    gap: 50px;
+  }
+
+  footer .media:nth-child(3) h5 {
+    font-size: 20px;
+  }
+  /* Footer Responsive Stop */
 }
 
-@media (max-width:430px) {
-    .heading {
-        width: 100%;
-    }
+@media (max-width: 591px) {
+  /* Project Responsive Start */
+  .btns-row {
+    flex-direction: column;
+  }
 
-    .heading h2 {
-        font-size: 30px;
-    }
-
+  /* Project Responsive End */
 }
 
-@media (max-width:394px) {}
+@media (max-width: 427px) {
+  .heading {
+    width: 100%;
+  }
+
+  .heading h2 {
+    font-size: 30px;
+  }
+
+  /* Choose Responsive Start */
+
+  .choose-heading p {
+    width: 100%;
+  }
+
+  .choose-heading .heading {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+
+  .choose-card {
+    padding: 20px;
+  }
+
+  .choose-card-count {
+    left: 0;
+    top: 82%;
+    padding: 0 20px;
+  }
+
+  /* Choose Responsive End */
+}
+
+@media (max-width: 394px) {
+  /* About Responsive Start */
+
+  .about-card-info p {
+    font-size: 11px;
+  }
+
+  .about-card-shape {
+    padding: 20px 25px;
+    width: 162px;
+    height: 200px;
+  }
+
+  /* About Responsive End */
+}
