@@ -89,6 +89,7 @@ h2 {
 .choose-img img {
   width: 100%;
 }
+
 /* header start */
 .top-bar {
   background-color: #f5f5f5;
@@ -169,8 +170,10 @@ h2 {
   align-items: center !important;
   justify-content: center !important;
   flex-direction: column;
-  opacity: 0; /* Başlangıçta görünmez */
-  visibility: hidden; /* Başlangıçta görünmez */
+  opacity: 0;
+  /* Başlangıçta görünmez */
+  visibility: hidden;
+  /* Başlangıçta görünmez */
   position: absolute;
   top: 52px;
   gap: 0 !important;
@@ -180,7 +183,8 @@ h2 {
   background-color: #ffffff;
   list-style: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: opacity 0.3s ease, visibility 0.3s ease; /* Geçiş efektleri */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  /* Geçiş efektleri */
 }
 
 .dropdown-menu li {
@@ -205,15 +209,17 @@ h2 {
   position: relative;
 }
 
-.dropdown-menu li:hover > a {
+.dropdown-menu li:hover>a {
   background-color: var(--main-blue) !important;
   color: white !important;
 }
 
 .dropdown:hover .dropdown-menu,
 .dropdown-menu:hover {
-  opacity: 1; /* Görünür hale gelir */
-  visibility: visible; /* Görünür hale gelir */
+  opacity: 1;
+  /* Görünür hale gelir */
+  visibility: visible;
+  /* Görünür hale gelir */
 }
 
 /* header end */
@@ -275,6 +281,7 @@ main start */
   overflow: hidden;
   z-index: 2;
 }
+
 .btn-primary::after {
   content: "";
   background: black;
@@ -289,10 +296,12 @@ main start */
   transform-origin: top left;
   width: 0;
 }
+
 .btn-primary:hover::after {
   height: 100%;
   width: 135%;
 }
+
 .btn-primary .icon {
   margin-left: 8px;
   vertical-align: middle;
@@ -622,6 +631,7 @@ main end */
   color: var(--paragraph-color);
   text-align: center;
 }
+
 /* Section Simple Process Css End */
 
 /* Form Start **********************************/
@@ -771,15 +781,18 @@ textarea {
   height: 100vh;
   margin-top: 50px;
 }
+
 .services .services-subtitle {
   color: var(--main-blue);
   text-align: center;
 }
+
 .services .services-title {
   font-weight: bold;
   font-size: 40px;
   text-align: center;
 }
+
 .services .cards {
   width: 100%;
 
@@ -789,9 +802,11 @@ textarea {
   gap: 50px;
   position: relative;
 }
+
 .services .cards img {
   width: 420px;
 }
+
 .services .cards .text {
   box-shadow: 0 3px 20px rgba(0, 33, 71, 0.06);
   background: #fff;
@@ -807,6 +822,7 @@ textarea {
 .services .cards svg {
   width: 100px;
 }
+
 .text h3 {
   font-size: 22px;
   margin-bottom: 10px;
@@ -829,6 +845,7 @@ textarea {
 .services .cards p {
   color: rgb(127, 127, 127);
 }
+
 .services .cards .card {
   position: relative;
 }
@@ -836,6 +853,7 @@ textarea {
 .services h2 {
   margin-bottom: 40px;
 }
+
 .services .cards .info a:after {
   content: "";
   background: var(--main-blue);
@@ -852,6 +870,115 @@ textarea {
 }
 
 /* Services End */
+
+
+
+/* Team Member Css Start */
+.team-member-content .container{
+  padding: 0;
+}
+
+.team-member-content .team-member-row {
+  width: 100%;
+  display: flex;
+gap: 30px;
+  justify-content: space-between;
+  margin-left: -12px;
+  margin-right: -12px;
+  
+}
+
+.team-member-card {
+  width: 33.33%;
+  border: 0;
+  border-radius: 20px 70px 20px 70px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+
+
+}
+.team-member-card img{
+  transition: all 500ms ease;
+  transform: scale(1.1);
+  max-width: 100%;
+}
+.team-member-card:hover img{
+transform: scale(1.2);
+}
+.team-member-content ul{
+  height: auto;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  transition: .4s;
+  display: inline-block;
+  position: absolute;
+  left: -43px;
+  top: 25px;
+  width: 50px;
+  opacity: 0;
+  transition: all 500ms ease;
+  visibility: hidden;
+
+}
+.team-member-card:hover ul{
+  left: 43px;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%);
+}
+.team-member-content ul li i{
+font-size: 17px;
+background-color: #007bff;
+height: 35px;
+width: 35px;
+text-align: center;
+line-height: 1.9;
+color: white;
+border-radius: 4px;
+margin-bottom: 5px;
+
+}
+.team-member-info{
+  background: #fff;
+  position: relative;
+  z-index: 2;
+  border-radius: 0;
+  padding: 35px;
+  background: var(--main-blue);
+  visibility: hidden;
+  opacity: 0;
+  transition: .4s;
+  position: absolute;
+  bottom: -20px;
+  width: 100%;
+  transition: all 500ms ease;
+  text-align: center;
+
+}
+.team-member-info h5{
+  font-size: 20px;
+  font-weight: 600;
+   color: white;
+   margin-bottom: 10px;
+}
+.team-member-info p{
+  color: white;
+}
+
+
+.team-member-card:hover .team-member-info{
+  visibility: visible;
+  opacity: 1;
+  bottom: 0;
+}
+
+
+
+/* Team Member Css End */
 
 /* Team Css Start */
 .team-content {
@@ -878,9 +1005,11 @@ textarea {
   font-size: 40px;
   margin-bottom: 10px;
 }
+
 .team-card img {
   transition: all 500ms ease;
 }
+
 .team-card:hover img {
   transform: rotateY(180deg);
 }
@@ -1010,6 +1139,7 @@ svg {
   color: var(--main-blue);
   vertical-align: middle;
 }
+
 .news-cart-container {
   display: flex;
   justify-content: center;
@@ -1030,6 +1160,7 @@ svg {
 .news-title a {
   color: var(--heading-color);
 }
+
 .news-title a:hover {
   color: var(--main-blue);
 }
@@ -1042,6 +1173,7 @@ svg {
   font: 15px var(--heading-font-family);
   color: var(--paragraph-color);
 }
+
 .news-cart-img {
   overflow: hidden;
   border-radius: 5px;
@@ -1153,9 +1285,11 @@ svg {
 .read-more:hover {
   color: var(--main-blue);
 }
+
 .read-more:hover svg {
   color: var(--main-blue);
 }
+
 /* News Style end */
 
 /* Footer Css Start */
@@ -1212,11 +1346,13 @@ footer {
   flex-direction: column;
   gap: 10px;
 }
+
 .widget ul a {
   display: inline-flex;
   align-items: center;
   gap: 8px;
 }
+
 .widget:nth-child(1) {
   margin-right: 30px;
 }
@@ -1233,11 +1369,13 @@ footer {
 p {
   font: 16px var(--heading-font-family);
 }
+
 .widget a {
   color: white;
   font-family: var(--heading-font-family);
   font-size: 16px;
 }
+
 footer h5 {
   font-size: 20px;
 }
@@ -1245,6 +1383,7 @@ footer h5 {
 .widget h4 {
   font-size: 20px;
 }
+
 .widget a:hover {
   color: var(--main-blue);
 }
