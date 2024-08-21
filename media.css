@@ -55,6 +55,17 @@
   }
 
   /* Project Responsive End */
+
+
+  /* Simple Process Responsive Start */
+  #Process .process-cart {
+    gap: 0;
+    justify-content: space-between;
+  }
+
+
+  /* Simple Process Responsive End */
+
 }
 
 @media (max-width: 853px) {
@@ -109,6 +120,12 @@
   /* Project Responsive End */
 
   /* Process Responsive Start */
+
+  #Process .process-cart {
+    gap: 30px;
+
+  }
+
   .simple-title h2 {
     font-size: 30px;
   }
@@ -121,6 +138,11 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 30px;
+  }
+
+  .process-details {
+    justify-content: center;
+    align-items: center;
   }
 
   .process-img p {
@@ -204,11 +226,12 @@
   /* Footer Responsive Start */
   .media-container {
     flex-direction: column;
-    gap: 0px;
+    gap: 1px;
   }
 
   .media {
     width: 100%;
+ 
   }
 
   .media:nth-child(3) {
@@ -220,9 +243,7 @@
     gap: 40px;
   }
 
-  .widget-container {
-    margin-left: 120px;
-  }
+
 
   .widget {
     width: 100%;
@@ -239,6 +260,17 @@
   .container {
     max-width: 540px;
   }
+
+  /* Top Scroll Responsive Start */
+.top-scroll button{
+  right: 10px;
+  bottom: 10px;
+}
+
+
+  /* Top Scroll Responsive End */
+
+
 
   /* Choose Responsive Start */
   .choose-info {
@@ -265,12 +297,17 @@
 
   /* Process Responsive Start */
   .simple-title h2 {
-    font-size: 18px;
+    font-size: 40px;
     font: bold;
   }
 
   .process-cart-row {
     width: 100%;
+  }
+
+  #Process {
+    margin: 0;
+
   }
 
   .process-cart {
@@ -427,11 +464,20 @@
 
   /* Team Member Responsive Start */
 
- .team-member-info{
-  padding: 20px;
- }
+  .team-member-info {
+    padding: 20px;
+  }
 
   /* Team Member Responsive End */
+
+  /* Process Responsive Start */
+
+  .simple-title h2 {
+    font-size: 32px;
+
+  }
+
+  /* Process Responsive End */
 }
 
 @media (max-width: 394px) {
