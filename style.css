@@ -927,6 +927,7 @@ h2 {
   margin-bottom: 20px;
   font-size: 40px;
   margin-right: 20px;
+  color: var(--heading-color);
 }
 
 .form-text h6 {
