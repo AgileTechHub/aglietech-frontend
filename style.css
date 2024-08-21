@@ -463,10 +463,16 @@ h2 {
 /* Main End */
 
 /* Services start */
+
 .services {
   width: 100%;
   height: 100vh;
   margin-top: 100px;
+}
+
+
+.service-heading h6 {
+  color: var(--main-blue) ;
 }
 
 .services .services-subtitle {
@@ -511,6 +517,7 @@ h2 {
 .text h3 {
   font-size: 22px;
   margin-bottom: 10px;
+  color: var(--heading-color);
 }
 
 .services .svg-container {
@@ -531,7 +538,7 @@ h2 {
 }
 
 .services .cards p {
-  color: rgb(127, 127, 127);
+  color: var(--paragraph-color);
 }
 
 .services .cards .card {
@@ -540,6 +547,7 @@ h2 {
 
 .services h2 {
   margin-bottom: 40px;
+  color: var(--heading-color);
 }
 
 .services .cards .info .svg-container {
