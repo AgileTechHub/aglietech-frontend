@@ -72,3 +72,32 @@ window.addEventListener("scroll", () => {
 
 
 
+// Top-scroll Button Start
+
+
+window.addEventListener("scroll",()=>{
+    if (scrollY > 40) {
+        document.querySelector(".top-scroll button").style.display="block"
+   
+    }
+    if (scrollY > 540) {
+     
+       document.querySelector("header").classList.add("fxHeader")
+       document.querySelector(".top-bar").style.display="none"
+
+    }
+    else{
+        document.querySelector("header").classList.remove("fxHeader")
+        document.querySelector(".top-bar").style.display="flex"
+        document.querySelector(".top-scroll button").style.display="none"
+    }
+    
+})
+
+
+
+
+
+
+
+// Top-scroll Button End
