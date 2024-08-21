@@ -498,12 +498,13 @@
   /* Footer Responsive Start */
   .media-container {
     flex-direction: column;
-    gap: 1px;
+    gap: 0;
+    
   }
 
   .media {
     width: 100%;
-
+  
   }
 
   .media:nth-child(3) {
