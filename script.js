@@ -1,4 +1,19 @@
+// Header dropdwon-menu Js Start
+
+document.querySelector('.burger-menu').addEventListener('click', function () {
+    this.classList.toggle('active');
+    document.querySelector('.main-dropdown').classList.toggle('active-drop');
+});
+
+
+
+// Header dropdwon-menu Js End
+
+
+
+
 // Project Section Change Category Js  Start 
+
 
 
 const buttons = document.querySelectorAll(".project-btns button")
@@ -39,32 +54,32 @@ buttons.forEach((button) => {
 
 
 const infoSpan = document.querySelectorAll(".count-span")
-let active=false
+let active = false
 
 window.addEventListener("scroll", () => {
 
 
-    if (scrollY > 110 && active===false) {
+    if (scrollY > 110 && active === false) {
         infoSpan.forEach((span) => {
             span.innerText = 0
             let count = 0
-            function updateCounter(){
-                let target=parseInt(span.dataset.count)
-               if(target>count){
-                count++
-                span.innerText=count+"+"
-                setTimeout(updateCounter,10)
-               }
-               else{
-                span.innerText=target+"+"
-               }
+            function updateCounter() {
+                let target = parseInt(span.dataset.count)
+                if (target > count) {
+                    count++
+                    span.innerText = count + "+"
+                    setTimeout(updateCounter, 10)
+                }
+                else {
+                    span.innerText = target + "+"
+                }
             }
             updateCounter()
-           active=true
+            active = true
         })
-       
+
     }
-   
+
 
 })
 
@@ -75,23 +90,23 @@ window.addEventListener("scroll", () => {
 // Top-scroll Button Start
 
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
     if (scrollY > 40) {
-        document.querySelector(".top-scroll button").style.display="block"
-   
-    }
-    if (scrollY > 540) {
-     
-       document.querySelector("header").classList.add("fxHeader")
-       document.querySelector(".top-bar").style.display="none"
+        document.querySelector(".top-scroll button").style.display = "block"
 
     }
-    else{
-        document.querySelector("header").classList.remove("fxHeader")
-        document.querySelector(".top-bar").style.display="flex"
-        document.querySelector(".top-scroll button").style.display="none"
+    if (scrollY > 540) {
+
+        document.querySelector("header").classList.add("fxHeader")
+        document.querySelector(".top-bar").style.display = "none"
+
     }
-    
+    else {
+        document.querySelector("header").classList.remove("fxHeader")
+        document.querySelector(".top-bar").style.display = "flex"
+        document.querySelector(".top-scroll button").style.display = "none"
+    }
+
 })
 
 
@@ -101,3 +116,7 @@ window.addEventListener("scroll",()=>{
 
 
 // Top-scroll Button End
+
+
+
+
