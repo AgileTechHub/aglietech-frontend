@@ -2,6 +2,10 @@
   .heading {
     width: 50%;
   }
+
+  #Process {
+    margin-bottom: 150px;
+  }
 }
 
 @media (max-width: 1280px) {
@@ -9,9 +13,37 @@
     max-width: 1140px;
   }
 
+  /* Main Responsive Start */
+
+  .main {
+    margin-bottom: 120px;
+  }
+  .mega-menu-drop{
+    gap: 50px;
+  
+    }
+    .mega-menu-drop li{
+      width: 190px;
+    
+     }
+  /* Main Responsive End */
+
+
   /* Services Responsive Start */
   .services .cards img {
     width: 356px;
+  }
+
+  #Project .heading {
+    width: 70%;
+  }
+
+  .services .heading {
+    width: 70%;
+  }
+
+  .services {
+    margin-bottom: 120px;
   }
 
   .services .cards .text {
@@ -37,6 +69,10 @@
   /* Form Responsive Start */
   .form-text p {
     line-height: 2rem;
+  }
+
+  #Process {
+    margin-bottom: 150px !important;
   }
 
   /* Form Responsive End */
@@ -69,6 +105,14 @@
   .main-menu {
     padding-left: 100px;
   }
+  .mega-menu-drop{
+  gap: 50px;
+
+  }
+  .mega-menu-drop li{
+    width: 190px;
+  
+   }
 
   /* Header Responsive End */
 
@@ -84,6 +128,10 @@
   .services {
     height: auto;
 
+  }
+
+  .services .heading {
+    width: 70%;
   }
 
   .services .cards {
@@ -137,6 +185,10 @@
     flex-direction: row;
   }
 
+  #Project .heading {
+    width: 100%;
+  }
+
   /* Project Responsive End */
 
 
@@ -155,6 +207,19 @@
   .container {
     max-width: 720px;
   }
+
+  /* Video Responsive Start */
+  .video-shape .container {
+    width: 150%;
+    height: 40vh;
+  }
+
+  .video-shape .exit-btn {
+    right: 8%;
+    top: 26%;
+  }
+
+  /* Video Responsive End */
 
   /* Header Responsive Start */
   .top-bar {
@@ -245,6 +310,10 @@
     flex-wrap: wrap;
     gap: 0 !important;
     justify-content: space-between;
+  }
+
+  .services .heading {
+    width: 100%;
   }
 
   .services .cards .card {
@@ -791,6 +860,14 @@
 }
 
 @media (max-width: 591px) {
+  /* Video Responsive Start */
+
+  .video-shape .exit-btn {
+    right: 6%;
+    top: 26%;
+  }
+
+  /* Video Responsive End */
 
   /* Header Responsive Start */
   .main-menu {
@@ -859,6 +936,15 @@
 }
 
 @media (max-width: 427px) {
+
+  /* Video Responsive Start */
+
+  .video-shape .exit-btn {
+    right: 4%;
+    top: 26%;
+  }
+
+  /* Video Responsive End */
   .heading {
     width: 100%;
   }

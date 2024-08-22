@@ -59,7 +59,7 @@ let active = false
 window.addEventListener("scroll", () => {
 
 
-    if (scrollY > 110 && active === false) {
+    if (scrollY > 5300 && active === false) {
         infoSpan.forEach((span) => {
             span.innerText = 0
             let count = 0
@@ -91,7 +91,8 @@ window.addEventListener("scroll", () => {
 
 
 window.addEventListener("scroll", () => {
-    if (scrollY > 40) {
+    console.log(scrollY);
+    if (scrollY > 10) {
         document.querySelector(".top-scroll button").style.display = "block"
 
     }
@@ -119,4 +120,15 @@ window.addEventListener("scroll", () => {
 
 
 
-
+const play=document.querySelector(".secondary img")
+play.addEventListener("click",()=>{
+    document.querySelector(".video-shape").style.display="flex"
+ 
+  
+})
+const exit=document.querySelector(".video-shape").addEventListener("click",(e)=>{
+   
+  if(e.target.classList.contains("video-shape") || e.target.classList.contains("fa-solid")  ){
+    document.querySelector(".video-shape").style.display="none"
+  }
+})
